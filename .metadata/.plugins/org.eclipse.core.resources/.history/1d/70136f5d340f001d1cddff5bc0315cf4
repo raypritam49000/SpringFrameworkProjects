@@ -1,0 +1,6 @@
+package net.codejava.config;
+
+public class MyBatisConfig {
+
+	
+}

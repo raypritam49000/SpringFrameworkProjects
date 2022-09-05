@@ -1,0 +1,4 @@
+package com.spring.jpa.mongo.db.config;
+public interface UserRepository extends MongoRepository<User, String> {
+    // 
+}

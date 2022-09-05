@@ -1,0 +1,9 @@
+package com.spring.jpa.mongo.db.collections;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface UserRepository extends MongoRepository<Customer, String> {
+  
+}

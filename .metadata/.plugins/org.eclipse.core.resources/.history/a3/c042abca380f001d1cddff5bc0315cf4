@@ -1,0 +1,6 @@
+package net.codejava.mapper;
+
+
+public interface CustomerMapper {
+
+}

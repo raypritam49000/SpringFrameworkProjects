@@ -1,0 +1,12 @@
+package com.mybatis.mapper;
+
+import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
+
+import com.mybatis.model.Student;
+
+public interface StudentMapper {
+
+	@Select("select * from student where id = #{id}")
+	public abstract Student findById(@Param("id") Long id);
+}

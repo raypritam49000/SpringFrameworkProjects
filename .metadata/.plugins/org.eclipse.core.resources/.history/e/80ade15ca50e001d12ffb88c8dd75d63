@@ -1,0 +1,12 @@
+package net.codejava.controllers;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class StudentController {
+	
+	public String hello() {
+		return "index";
+	}
+
+}

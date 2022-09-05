@@ -1,0 +1,23 @@
+package com.spring.mvc.controllers;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.spring.mvc.services.UserServices;
+
+@Controller
+@Transactional
+public class UserController {
+	
+	@Autowired
+	private UserServices userService;
+
+	@GetMapping("/")
+	public String index() {
+		System.out.println(userService);
+		return "index";
+	}
+}

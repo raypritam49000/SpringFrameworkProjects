@@ -1,0 +1,5 @@
+com\mybatis\model\Student.class
+com\mybatis\mapper\StudentMapper.class
+com\mybatis\config\WebMvcConfig.class
+com\mybatis\config\WebAppInitializer.class
+com\mybatis\controller\StudentController.class

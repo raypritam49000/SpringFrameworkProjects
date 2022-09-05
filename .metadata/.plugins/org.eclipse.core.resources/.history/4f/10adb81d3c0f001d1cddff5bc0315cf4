@@ -1,0 +1,45 @@
+package net.codejava.services.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import net.codejava.mapper.CustomerMapper;
+import net.codejava.models.Customer;
+import net.codejava.services.CustomerService;
+
+public class CustomerServiceImpl implements CustomerService{
+	
+	@Autowired
+	private CustomerMapper customerMapper;
+
+	@Override
+	public List<Customer> findAll() {
+		return this.customerMapper.findAll();
+	}
+
+	@Override
+	public Customer findById(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void updateCustomer(Customer customer) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void saveCustomer(Customer customer) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

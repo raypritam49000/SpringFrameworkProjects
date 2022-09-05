@@ -1,0 +1,20 @@
+package com.spring.mvc.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.spring.mvc.services.UserServices;
+
+@Controller
+public class UserController {
+	
+	@Autowired
+	private UserServices userService;
+
+	@GetMapping("/")
+	public String listOfUser() {
+		System.out.println(userService.findAllUser());
+		return "index";
+	}
+}

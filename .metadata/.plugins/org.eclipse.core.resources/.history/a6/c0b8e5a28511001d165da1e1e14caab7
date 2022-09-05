@@ -1,0 +1,43 @@
+package com.spring.mvc.dao;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate5.HibernateTemplate;
+import org.springframework.stereotype.Repository;
+
+import com.spring.mvc.entity.User;
+
+@Repository
+public class UserDaoImple implements UserDao {
+
+	@Autowired
+	private HibernateTemplate hibernateTemplate;
+
+	@Override
+	public User createUser(User user) {
+		return hibernateTemplate.get(User.class, hibernateTemplate.save(user));
+	}
+
+	@Override
+	public List<User> findAllUser() {
+		return hibernateTemplate.loadAll(User.class);
+	}
+
+	@Override
+	public User findById(Integer id) {
+		return hibernateTemplate.get(User.class, id);
+	}
+
+	@Override
+	public User updateUser(User user) {
+		return hibernateTemplate.get(User.class, hibernateTemplate.saveOrUpdate(user));
+	}
+
+	@Override
+	public User deleteUser(Integer id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

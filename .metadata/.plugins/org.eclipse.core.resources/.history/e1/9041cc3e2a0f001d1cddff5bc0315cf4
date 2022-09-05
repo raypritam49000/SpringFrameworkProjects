@@ -1,0 +1,16 @@
+package com.concretepage.mapper;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Insert;
+
+import com.concretepage.Village;
+
+public interface VillageMapper {
+
+	@Insert("INSERT into village(name,district) VALUES(#{villageName}, #{district})")
+	public abstract void insertVillage(Village village);
+	
+	@
+	public abstract List<Village> findAll();
+}

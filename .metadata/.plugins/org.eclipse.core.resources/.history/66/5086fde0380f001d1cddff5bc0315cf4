@@ -1,0 +1,5 @@
+package net.codejava.dbquery;
+
+public class DatabaseQuery {
+	public static final String FIND_CUSTOMERS = "select * from customer";
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aop-reference-model>
+<aop-project name="SpringHibernateJPADemo"/>
+<aop-project name="SpringMVC5JavaBasedConfigDemo"/>
+<aop-project name="SpringMVCWebSocketMessageDemo"/>
+<aop-project name="SpringRestApiHibernateTemplate"/>
+<aop-project name="SpringSecurity5RememberMeAuthentication"/>
+<aop-project name="SpringMVC4FileUploadServlet3Demo"/>
+<aop-project name="SpringWithJdbcDemo"/>
+<aop-project name="SpringHibernateWithoutXmlDemo"/>
+<aop-project name="SpringMvcMyBatisCrudOperationDemo"/>
+<aop-project name="SpringWithJPACRUDDemo"/>
+<aop-project name="spring-mvc-locale-resolver-example"/>
+<aop-project name="SpringMvcWithXmlJavaDemo"/>
+<aop-project name="SpringSecurity4HelloWorldDemo"/>
+<aop-project name="SpringMvcWithJdbcDemo"/>
+<aop-project name="SpringMvcWithDataJPADemo"/>
+<aop-project name="SpringMVCCommonsFileUploadDemo"/>
+<aop-project name="SpringWithHibernateDemo"/>
+<aop-project name="SpringSecurity4CustomLoginDemo"/>
+<aop-project name="SpringMVCThymeleafTemplate"/>
+<aop-project name="SpringRestApiWithHibernateDemo"/>
+<aop-project name="SpringMvcHibernateTemplateDemo"/>
+<aop-project name="SpringMVCSecurityHibernateDemo"/>
+<aop-project name="SpringMvcWithMyBatisDemo"/>
+<aop-project name="SpringSecurityRememberMeAuthenticationDemo"/>
+<aop-project name="SpringMvcWithJPAMongoDB"/>
+<aop-project name="SpringSecurityJdbcAuthenticationDemo"/>
+<aop-project name="SpringMVCWithXmlJavaApp"/>
+<aop-project name="SpringMVCJavaConfigDemo"/>
+<aop-project name="SpringMVC4FormvalidationDemo"/>
+<aop-project name="SpringSecurity5CustomUserDetailsServiceDemo"/>
+<aop-project name="SpringSecurityHTTPBasicAuthentication"/>
+<aop-project name="SpringMvcWithJPACrudOpertion"/>
+<aop-project name="SpringWithJspHibernateDemo"/>
+<aop-project name="SpringFormValidation"/>
+<aop-project name="SpringMVCCRUDExampleWithAjax"/>
+</aop-reference-model>

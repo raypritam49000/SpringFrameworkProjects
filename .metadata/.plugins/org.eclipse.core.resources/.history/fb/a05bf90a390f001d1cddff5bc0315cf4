@@ -1,0 +1,14 @@
+package net.codejava.mapper;
+
+import java.util.List;
+
+import org.apache.ibatis.annotations.Select;
+
+import net.codejava.dbquery.DatabaseQuery;
+import net.codejava.models.Customer;
+
+public interface CustomerMapper {
+
+	@Select(DatabaseQuery.FIND_CUSTOMERS)
+	public abstract List<Customer> findAll();
+}

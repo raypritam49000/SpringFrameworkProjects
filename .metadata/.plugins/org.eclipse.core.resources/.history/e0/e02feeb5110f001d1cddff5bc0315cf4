@@ -1,0 +1,31 @@
+package com.mybatis.config;
+
+import javax.sql.DataSource;
+
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.mybatis.spring.SqlSessionFactoryBean;
+import org.mybatis.spring.annotation.MapperScan;
+import org.springframework.context.annotation.Bean;
+
+import com.mysql.jdbc.jdbc2.optional.MysqlDataSource;
+
+@org.springframework.context.annotation.Configuration
+@MapperScan("com.baeldung.mybatis")
+public class PersistenceConfig {
+
+	@Bean
+	public DataSource dataSource() {
+		MysqlDataSource mysqlDataSource = new MysqlDataSource();
+		mysqlDataSource.setUrl("jdbc:mysql://localhost:3306/test");
+		mysqlDataSource.setUser("root");
+		mysqlDataSource.setPassword("1998");
+		return mysqlDataSource;
+	}
+
+	@Bean
+	public SqlSessionFactory sqlSessionFactory() throws Exception {
+		SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
+		factoryBean.setDataSource(dataSource());
+		return factoryBean.getObject();
+	}
+}

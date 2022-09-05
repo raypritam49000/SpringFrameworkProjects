@@ -1,0 +1,47 @@
+package net.codejava.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import net.codejava.entity.Student;
+import net.codejava.repository.StudentRepository;
+
+@Service
+public class StudentServiceImpl implements StudentService{
+
+	@Autowired
+	private StudentRepository studentRepository; 
+	
+	@Override
+	public Student createStudent(Student student) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Student> getAllStudent() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Student getStudent(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Boolean deleteStudent(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Student updateStudent(String id, Student student) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

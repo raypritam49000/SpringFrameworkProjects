@@ -1,0 +1,27 @@
+package com.spring.jpa.mongo.db.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.mongodb.core.MongoTemplate;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+import com.mongodb.client.MongoClient;
+import com.mongodb.client.MongoClients;
+
+@Configuration
+@EnableMongoRepositories(basePackages = "com.spring.jpa.mongo.db.collections")
+@EnableTransactionManagement
+public class MongoConfig {
+
+	@Bean
+	public MongoClient mongoClient() {
+		return MongoClients.create("mongodb://localhost:27017/test");
+	}
+
+	public MongoTemplate mongoTemplate() {
+		MongoTemplate mongoTemplate = new MongoTemplate((com.mongodb.client.MongoClient) mongoClient(), "customer");
+		return mongoTemplate;
+	}
+
+}

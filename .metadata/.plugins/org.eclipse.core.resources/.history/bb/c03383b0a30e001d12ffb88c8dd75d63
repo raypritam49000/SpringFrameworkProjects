@@ -1,0 +1,9 @@
+package net.codejava.entity;
+
+
+public class Student {
+	private String id;
+	private String name;
+	private String city;
+	private String salary;
+}
