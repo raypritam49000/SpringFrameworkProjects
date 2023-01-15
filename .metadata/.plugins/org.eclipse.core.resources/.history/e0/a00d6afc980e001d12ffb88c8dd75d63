@@ -1,0 +1,15 @@
+package com.spring.jpa.mongo.db.config;
+
+import org.springframework.context.annotation.Configuration;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
+
+@Configuration
+@EnableMongoRepositories(basePackages = "com.spring.jpa.mongo.db.collections")
+@EnableTransactionManagement
+public class MongoConfig {
+
+	
+	
+
+}

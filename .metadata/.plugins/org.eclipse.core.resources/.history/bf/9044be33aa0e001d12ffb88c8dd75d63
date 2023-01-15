@@ -1,0 +1,51 @@
+//package net.codejava.services;
+//
+//import java.util.List;
+//
+//import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.stereotype.Service;
+//
+//import net.codejava.entity.Student;
+//import net.codejava.repository.StudentRepository;
+//
+//@Service
+//public class StudentServiceImpl implements StudentService{
+//
+//	@Autowired
+//	private StudentRepository studentRepository; 
+//	
+//	@Override
+//	public Student createStudent(Student student) {
+//		return this.studentRepository.save(student);
+//	}
+//
+//	@Override
+//	public List<Student> getAllStudent() {
+//		return this.studentRepository.findAll();
+//	}
+//
+//	@Override
+//	public Student getStudent(String id) {
+//		return this.studentRepository.findById(id).get();
+//	}
+//
+//	@Override
+//	public Boolean deleteStudent(String id) {
+//		this.studentRepository.delete(studentRepository.findById(id).get());
+//		return true;
+//	}
+//
+//	@Override
+//	public Student updateStudent(String id, Student student) {
+//		Student existStudent = this.studentRepository.findById(id).get();
+//		Student updateStudent = null;
+//		if(existStudent!=null) {
+//			existStudent.setName(student.getName());
+//			existStudent.setCity(student.getCity());
+//			existStudent.setSalary(student.getSalary());
+//			updateStudent = this.studentRepository.save(existStudent);
+//		}
+//		return updateStudent;
+//	}
+//
+//}

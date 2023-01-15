@@ -1,0 +1,13 @@
+package net.codejava.services;
+
+import java.util.List;
+
+import net.codejava.models.Customer;
+
+public interface CustomerService {
+	public abstract List<Customer> findAll();
+	public abstract Customer findById(int id);
+	public abstract void delete(int id);
+	public abstract void updateCustomer(Customer customer);
+	public abstract void saveCustomer(Customer customer);
+}

@@ -1,0 +1,5 @@
+package net.codejava.dbquery;
+
+public class DbQuery {
+
+}

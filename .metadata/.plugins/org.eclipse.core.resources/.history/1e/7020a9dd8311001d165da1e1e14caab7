@@ -1,0 +1,22 @@
+package com.spring.mvc.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.orm.hibernate5.HibernateTemplate;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.spring.mvc.entity.User;
+
+@Controller
+public class UserController {
+	
+	@Autowired
+	private HibernateTemplate hibernateTemplate;
+
+	@GetMapping("/")
+	public String index() {
+		System.out.println(hibernateTemplate.loadAll(User.class));
+		System.out.println(hibernateTemplate.getSessionFactory().openSession().save(new User("Pritam Ray","Ropar","50000")));
+		return "index";
+	}
+}

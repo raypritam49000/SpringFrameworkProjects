@@ -1,0 +1,23 @@
+package com.demo.services;
+
+import org.springframework.stereotype.Service;
+
+import com.demo.entity.User;
+
+@Service
+public class UserServiceImpl implements UserServices{
+
+	@Override
+	public int saveUser(User user) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+	
+//	@Autowired
+//	private RegisterDao registerDao;
+//
+//	public int saveUser(User user) {
+//		return this.registerDao.saveUser(user);
+//	}
+
+}

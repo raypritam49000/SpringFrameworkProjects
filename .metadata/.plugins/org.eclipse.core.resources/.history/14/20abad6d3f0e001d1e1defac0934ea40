@@ -1,0 +1,8 @@
+package com.demo.db.query;
+
+public class DBQUERY {
+	public static final String INSERT_USER = "INSERT INTO user (name,city,email,mobile) VALUES (?,?,?,?)";
+	public static final String FIND_USER_BY_ID = "select * from user where id=?";
+	public static final String FIND_USERS = "select * from user";
+	public static final String DELETE_USER = "select * from user";
+}

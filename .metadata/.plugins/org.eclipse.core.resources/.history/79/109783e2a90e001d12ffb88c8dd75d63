@@ -1,0 +1,16 @@
+package net.codejava.entity;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "students")
+
+public class Customer {
+
+	@Id
+	private Long id;
+	private String name;
+	private String email;
+	private String address;
+
+}

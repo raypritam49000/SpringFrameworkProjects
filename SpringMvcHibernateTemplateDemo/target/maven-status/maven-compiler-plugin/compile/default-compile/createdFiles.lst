@@ -1,0 +1,4 @@
+com\spring\mvc\config\WebInitializer.class
+com\spring\mvc\config\AppConfig.class
+com\spring\mvc\controllers\UserController.class
+com\spring\mvc\entity\User.class

@@ -1,0 +1,51 @@
+package net.codejava.services;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import net.codejava.entity.Customer;
+import net.codejava.repository.CustomerRepository;
+
+@Service
+public class CustomerServiceImpl implements CustomerService{
+
+	@Autowired
+	private CustomerRepository CustomerRepository; 
+	
+	@Override
+	public Customer createCustomer(Customer Customer) {
+		return this.CustomerRepository.save(Customer);
+	}
+
+	@Override
+	public List<Customer> getAllCustomer() {
+		return this.CustomerRepository.findAll();
+	}
+
+	@Override
+	public Customer getCustomer(String id) {
+		return this.CustomerRepository.findById(id).get();
+	}
+
+	@Override
+	public Boolean deleteCustomer(String id) {
+		this.CustomerRepository.delete(CustomerRepository.findById(id).get());
+		return true;
+	}
+
+	@Override
+	public Customer updateCustomer(String id, Customer Customer) {
+		Customer existCustomer = this.CustomerRepository.findById(id).get();
+		Customer updateCustomer = null;
+		if(existCustomer!=null) {
+			existCustomer.setName(Customer.getName());
+			existCustomer.setCity(Customer.getCity());
+			existCustomer.setSalary(Customer.getSalary());
+			updateCustomer = this.CustomerRepository.save(existCustomer);
+		}
+		return updateCustomer;
+	}
+
+}

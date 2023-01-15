@@ -1,0 +1,23 @@
+package net.codejava.controllers;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+import net.codejava.repository.StudentRepository;
+import net.codejava.services.StudentService;
+
+@Controller
+public class StudentController {
+	
+	@Autowired
+	private StudentService studentService;
+
+	@RequestMapping(path = "/", method = RequestMethod.GET)
+	public String hello() {
+		System.out.println(studentRepository.findAll());
+		return "index";
+	}
+
+}

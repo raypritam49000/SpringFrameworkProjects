@@ -1,0 +1,47 @@
+package com.javainterviewpoint;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+public class Application {
+	
+	@Autowired
+	private MongoRepository mongoRepository;
+	public static void main(String[] args) {
+		AbstractApplicationContext context = new AnnotationConfigApplicationContext(SpringConfig.class);
+		EmployeeDaoImpl employeeDaoImpl = (EmployeeDaoImpl) context.getBean("employeeDaoImpl");
+
+//		// Create Employee
+//		Employee employee1 = new Employee("Tom", "Jerry");
+//		employeeDaoImpl.createEmployee(employee1);
+//
+//		// Get Employee by FirstName
+//		Employee employee2 = employeeDaoImpl.getEmployeeByFirstName("Tom");
+//		System.out.println("*** Get Employee By FirstName ***");
+//		System.out.println("First Name : " + employee2.getFirstname());
+//		System.out.println("Last  Name : " + employee2.getLastname());
+
+		// Get all Employees
+		List<Employee> employeeList = employeeDaoImpl.getAllEmployees();
+		System.out.println("*** Get All Employees ***");
+		for (Employee emp : employeeList) {
+			System.out.println("First Name : " + emp.getFirstname());
+			System.out.println("Last  Name : " + emp.getLastname());
+			System.out.println("#######################################");
+		}
+
+//		// Update Employee - Read from DB and Update the Employee
+//		Employee employee3 = employeeDaoImpl.getEmployeeById("5d3ea548169b493d773327c1");
+//		employee3.setLastname("Jonny");
+//		employeeDaoImpl.updateEmployee(employee3);
+//
+//		// Delete Employee
+//		employeeDaoImpl.deleteEmployee("5d3ecb690594262d20a96e6e");
+//
+//		context.close();
+	}
+}

@@ -1,0 +1,30 @@
+package com.spring.mvc.controllers;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.spring.mvc.entity.User;
+import com.spring.mvc.services.UserServices;
+
+@Controller
+public class UserController {
+	
+	@Autowired
+	private UserServices userService;
+
+	@GetMapping("/")
+	public String listOfUser(Model model) {
+		List<User> users = userService.findAllUser();
+		model.addAttribute("users", users);
+		return "index";
+	}
+	
+	@GetMapping("/addUser")
+	public String addUser() {
+		return "addUser";
+	}
+}

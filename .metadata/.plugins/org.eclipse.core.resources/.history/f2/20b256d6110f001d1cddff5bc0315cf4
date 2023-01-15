@@ -1,0 +1,5 @@
+package com.mybatis.mapper;
+public interface ArticleMapper {
+    @Select("SELECT * FROM ARTICLES WHERE id = #{id}")
+    Article getArticle(@Param("id") Long id);
+}
